@@ -1,0 +1,35 @@
+/* 
+універсальний - * * {
+    color: red;
+}
+
+тега - a {
+    text-decoration: none;
+}
+
+id - #hero-header {
+  font-family: 'Raleway';
+} (1 раз на страницу)
+
+class - .header-btn {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+}
+
+атрибут - [type='button'] {
+  color: aqua;
+}
+
+дочірній - a.header-logo > img {
+    color: azure;
+}
+
+нащадка - .header a {
+    color: red;
+}
+ */
+
+ .link {
+    text-decoration: none;
+ }
