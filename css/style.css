@@ -30,10 +30,18 @@ class - .header-btn {
 }
  */
 
- .link {
-    text-decoration: none;
- }
+:root {
+  --color-text-link: #fff;
+}
 
- .list {
-    list-style: none;
- }
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
