@@ -1,47 +1,433 @@
-/* 
-універсальний - * * {
-    color: red;
-}
-
-тега - a {
-    text-decoration: none;
-}
-
-id - #hero-header {
-  font-family: 'Raleway';
-} (1 раз на страницу)
-
-class - .header-btn {
-    background-color: white;
-    color: blue;
-    border: 2px solid blue;
-}
-
-атрибут - [type='button'] {
-  color: aqua;
-}
-
-дочірній - a.header-logo > img {
-    color: azure;
-}
-
-нащадка - .header a {
-    color: red;
-}
- */
-
 :root {
-  --color-text-link: #fff;
-}
+  --primary-header-color: #303030;
+  --second-header-color: #ffffff;
+  --primary-link-color: #ffffff;
+  --accent-color: #ff6c00;
 
+  --main-font: 'Open Sans', sans-serif;
+
+  --main-margin: 20px;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+ul,
+ol {
+  margin: 0px;
+  padding-left: 0px;
+}
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+}
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--main-font);
 }
-
+/* Universal classes */
+.container {
+  width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
 .link {
   text-decoration: none;
 }
 
 .list {
   list-style: none;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent-color);
+  background-color: transparent;
+  border-radius: 25px;
+  height: 40px;
+  min-width: 160px;
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-color);
+}
+.pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+}
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+.after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* -----------HEADER----------- */
+header {
+  background-color: gray;
+}
+header .container {
+  display: flex;
+  align-items: center;
+}
+.header-list {
+  display: flex;
+}
+.header-logo {
+  padding: 32px 0;
+  display: block;
+  margin-right: 130px;
+}
+.header-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--primary-link-color);
+}
+.header-list > li:not(:last-child) {
+  margin-right: 30px;
+}
+/* .header-list li + li {
+  margin-left: 30px;
+} */
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
+}
+.header-cont {
+  margin-left: auto;
+}
+.header-tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--primary-link-color);
+}
+.header-btn {
+  color: #ffffff;
+  margin-left: 40px;
+}
+/* -----------HERO----------- */
+.hero {
+  background-color: #737373;
+}
+.hero-list {
+  width: 100px;
+}
+.hero .container {
+  display: flex;
+}
+.hero-right {
+  padding: 184px 526px 208px 100px;
+  flex-grow: 1;
+}
+.hero-pre-title {
+  color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--main-margin);
+}
+.hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: var(--second-header-color);
+  margin-bottom: var(--main-margin);
+}
+.hero-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+  max-width: 370px;
+}
+.hero-links {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+.hero-links:hover,
+.hero-links:focus {
+  color: var(--accent-color);
+}
+/* -----------ABOUT----------- */
+.about {
+  padding: 120px 0;
+}
+.about .container {
+  display: flex;
+}
+.list-about {
+  display: flex;
+}
+.about-wrap {
+  margin-left: 30px;
+}
+.about-items:not(:last-child) {
+  margin-right: 30px;
+}
+.about-pre-title {
+  color: #303030;
+  margin-bottom: var(--main-margin);
+}
+.about-title {
+  color: var(--primary-header-color);
+  margin-bottom: var(--main-margin);
+}
+.about-after-title {
+  color: #555555;
+  margin-bottom: var(--main-margin);
+}
+.about-text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-bottom: 42px;
+}
+.about-btn {
+  color: #303030;
+}
+
+/* -----------PRICES----------- */
+.prices {
+  padding: 120px 0;
+}
+.prices-pre-title {
+  color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--main-margin);
+}
+.prices-title {
+  color: var(--second-header-color);
+  margin-bottom: 44px;
+}
+.prices-list-wrap {
+  display: flex;
+  gap: 30px;
+}
+.prices-list {
+  border: 1px solid #000;
+  padding: 30px 20px;
+  flex-grow: 1;
+}
+.prices-items {
+  margin-bottom: var(--main-margin);
+  display: flex;
+  justify-content: space-between;
+}
+.prices-items:last-child {
+  margin-bottom: 0px;
+}
+.prices-elem {
+  font-size: 18px;
+  line-height: 1.66;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+.prices-btn {
+  color: #ffffff;
+  margin: 0 auto;
+  display: block;
+  margin-top: 44px;
+}
+/* -----------BENEFITS----------- */
+.benefits {
+  padding: 120px 0;
+}
+.benefits-items {
+  background: #f7f7f7;
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+  text-align: center;
+}
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 370px;
+}
+.benefits-items:nth-child(2n + 1) {
+  margin-right: 30px;
+}
+.benefits-items:nth-child(2n) {
+  margin-top: 30px;
+}
+.benefits-items > span {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.35;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
+  display: inline-block;
+}
+.benefits-items > sup {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+  color: var(--accent-color);
+}
+.benefits-items > p {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  color: #303030;
+}
+.benefits-pre-title {
+  color: #303030;
+  margin-bottom: var(--main-margin);
+}
+.benefits-title {
+  color: var(--primary-header-color);
+  margin-bottom: var(--main-margin);
+}
+.benefits-after-title {
+  color: #555555;
+}
+
+/* -----------BARBERS----------- */
+.barbers {
+  padding: 120px 0;
+}
+.barbers-pre-title {
+  color: #303030;
+  margin-bottom: var(--main-margin);
+}
+.barbers-title {
+  color: var(--primary-header-color);
+  margin-bottom: 44px;
+}
+.barbers-list {
+  display: flex;
+}
+.barbers-items:not(:last-child) {
+  margin-right: 30px;
+}
+.barbers-items {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.barbers-name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.38;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+.barbers-info {
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+/* -----------GALLERY----------- */
+.gallery {
+  padding: 120px 0;
+}
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+.gallery-item {
+  width: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.gallery-pre-title {
+  color: #303030;
+  margin-bottom: 44px;
+}
+
+/* -----------FORM----------- */
+.form-title {
+  color: var(--primary-header-color);
+}
+/* -----------CONTACTS----------- */
+.contacts {
+  background-color: #303030;
+}
+.contacts-title {
+  color: var(--second-header-color);
+}
+.contact-links {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+.contact-address {
+  font-weight: 700;
+}
+.contacts-pre-title {
+  color: #ffffff;
+}
+.contacts-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+/* -----------FOOTER----------- */
+.footer {
+  padding: 56px 0px;
+}
+.footer-copy {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+}
+.footer-links {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+.footer-links:hover,
+.footer-links:focus {
+  color: var(--accent-color);
 }
