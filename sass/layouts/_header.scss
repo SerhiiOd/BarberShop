@@ -4,6 +4,8 @@ header {
   left: 0;
   padding-top: 32px;
   padding-bottom: 32px;
+  background-color: gray;
+
   & .container {
     @extend %flex-align;
   }
